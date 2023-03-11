@@ -1,3 +1,53 @@
-[gd_scene format=3 uid="uid://caeewgoop75rl"]
+[gd_scene load_steps=6 format=3 uid="uid://caeewgoop75rl"]
+
+[ext_resource type="Texture2D" uid="uid://4k5d7xg2rml2" path="res://Assets/SmolTiGars.png" id="1_3lfyl"]
+[ext_resource type="Texture2D" uid="uid://8r83apnckcj4" path="res://Assets/SmolTiGarsFwd1.png" id="2_mgo51"]
+[ext_resource type="Texture2D" uid="uid://dkmnkdhpkf3a3" path="res://Assets/SmolTiGarsFwd2.png" id="3_lpyxj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_45uav"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3lfyl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8b6ei"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3lfyl")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_mgo51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_3lfyl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_lpyxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_3lfyl")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
 
 [node name="Game" type="Node2D"]
+
+[node name="MainCharacterIdle" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_45uav")
+
+[node name="MainCharacterWalk" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_8b6ei")
+animation = &"walk"
