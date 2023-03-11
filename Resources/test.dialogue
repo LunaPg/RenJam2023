@@ -1,0 +1,17 @@
+~ convo_empty
+
+SmolGhostiePortrait: Error
+
+=> END
+
+~ convo_test
+
+SmolGhostiePortrait: [[Hi|Hello|Howdy]], I'm a ghost!
+SmolTiGarsPortrait: What should I do?
+- Scream
+	SmolTiGarsPortrait: Aaaaaah!
+	SmolGhostiePortrait: Oh no.
+- Run
+	SmolTiGarsPortrait: You run away.
+
+=> END
