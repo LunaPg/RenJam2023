@@ -1,28 +1,60 @@
-**List of rooms
+----------------------------------List of Rooms----------------------------------
 - Living Room
 - Kitchen
 - Dining Room
 - Bathroom
-- Basement (locked) --> Resolution path
+- Basement (locked) --> Resolution path (Ghost doesn't follow until acceptance phase and if you have given him the ball)
 - Master bedroom (locked)
 - Shared Bedroom (Ghost doesn't follow)
 
+----------------------------------List of Interactable objects by room----------------------------------
+- Corridor
+  - Key hooks
+- Living Room
+  - Picture of parents
+- Kitchen
+  - Chair with a booster
+- Dining Room
+  - Broken plates
+- Bathroom
+  - Toilet
+  - Sink
+- Basement
+  - 
+- Master Bedroom
+  - 
+- Shared Bedroom
+  - Ball under the bed
 
-**We can cut out any room by locking it if need be
+----------------------------------Storyline----------------------------------
 
--- denial
+----------------------------------Tutorial----------------------------------
+Outside the house
+Key under a flowerpot that's interactable (whatever that looks like)
+Meeting the ghost
+
+Action that starts next phase: Opening the basement
+
+----------------------------------Denial----------------------------------
+Particularities: **talk with level designer
+**gets key to basement
+
+----------------------------------Anger----------------------------------
 Particularities: **talk with level designer
 
--- anger
+***gets hammer - breaks oven
+
+----------------------------------Bargaining----------------------------------
 Particularities: **talk with level designer
 
--- bargaining
+***gets rope from meat - Gets key from
+
+----------------------------------Depression----------------------------------
 Particularities: **talk with level designer
 
--- depression
-Particularities: **talk with level designer
+**Gets Broom
 
--- acceptance
+----------------------------------Acceptance----------------------------------
 Particulariitie: **talk with level designer
 Item to find: Ball in shared bedroom
 Associated text:
