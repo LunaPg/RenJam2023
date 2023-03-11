@@ -1,0 +1,115 @@
+[gd_scene load_steps=17 format=3 uid="uid://cqe3yrpy87d76"]
+
+[ext_resource type="Script" path="res://Scenes/Character.cs" id="1_hqdia"]
+[ext_resource type="Texture2D" uid="uid://g4g7e4djcnoj" path="res://Assets/SmolTiGars.png" id="2_xyb5s"]
+[ext_resource type="Texture2D" uid="uid://s2e2vph6ue7q" path="res://Assets/SmolTiGarsFwd1.png" id="4_mh070"]
+[ext_resource type="Texture2D" uid="uid://1rqn7qfg3tfb" path="res://Assets/SmolTiGarsFwd2.png" id="5_stbmy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_04oea"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xyb5s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mh070")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_stbmy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uaw4a"]
+radius = 41.0
+height = 112.0
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_c0sxf"]
+animation = &"idle_down"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_h21o5"]
+animation = &"walk_down"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_uu6ph"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_oxjah"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_guy7w"]
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_6w63x"]
+states/End/position = Vector2(739, 100)
+states/Start/position = Vector2(198, 104)
+states/idle/node = SubResource("AnimationNodeAnimation_c0sxf")
+states/idle/position = Vector2(324, 104)
+states/walk/node = SubResource("AnimationNodeAnimation_h21o5")
+states/walk/position = Vector2(437, 104)
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_uu6ph"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_oxjah"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_guy7w")]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_ohgxy"]
+
+[sub_resource type="Animation" id="Animation_q26pb"]
+resource_name = "walk_down"
+length = 0.5
+loop_mode = 1
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 2]
+}
+
+[sub_resource type="Animation" id="Animation_hcbqd"]
+resource_name = "idle_down"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yhdxi"]
+_data = {
+"idle_down": SubResource("Animation_hcbqd"),
+"walk_down": SubResource("Animation_q26pb")
+}
+
+[node name="Character" type="CharacterBody2D"]
+script = ExtResource("1_hqdia")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(6, -14)
+sprite_frames = SubResource("SpriteFrames_04oea")
+frame = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_uaw4a")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_6w63x")
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource("AnimationNodeStateMachinePlayback_ohgxy")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_yhdxi")
+}
