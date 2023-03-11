@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxe5ay78hpfos"
-path="res://.godot/imported/CameraRollSmol.png-2517e6c6902447274b4c3751027028ed.ctex"
+uid="uid://b3pupjiogw13k"
+path="res://.godot/imported/2d_lights_and_shadows_neutral_point_light.webp-7c52078d91b8c02803a1fd59fbc4c252.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/CameraRollSmol.png"
-dest_files=["res://.godot/imported/CameraRollSmol.png-2517e6c6902447274b4c3751027028ed.ctex"]
+source_file="res://Assets/2d_lights_and_shadows_neutral_point_light.webp"
+dest_files=["res://.godot/imported/2d_lights_and_shadows_neutral_point_light.webp-7c52078d91b8c02803a1fd59fbc4c252.ctex"]
 
 [params]
 
