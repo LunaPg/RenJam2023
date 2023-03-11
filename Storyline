@@ -1,28 +1,73 @@
-**List of rooms
+----------------------------------List of Rooms----------------------------------
 - Living Room
 - Kitchen
 - Dining Room
 - Bathroom
-- Basement (locked) --> Resolution path
+- Basement (locked) --> Resolution path (Ghost doesn't follow until acceptance phase and if you have given him the ball)
 - Master bedroom (locked)
 - Shared Bedroom (Ghost doesn't follow)
 
+----------------------------------List of Interactable objects by room----------------------------------
+- Corridor
+  - Key hooks (uninteractible after Denial)
+- Living Room
+  - Picture of parents
+- Kitchen
+  - Chair with a booster
+  - Broom (in the pantry)
+  - Pantry
+- Dining Room
+  - Broken plates
+- Bathroom
+  - Toilet
+- Basement
+  - Cutters
+  - Hammer
+- Master Bedroom
+  - 
+- Shared Bedroom
+  - Ball under the bed
 
-**We can cut out any room by locking it if need be
+----------------------------------Storyline----------------------------------
 
--- denial
+----------------------------------Tutorial----------------------------------
+Outside the house
+Key under a flowerpot that's interactable (whatever that looks like)
+Meeting the ghost
+
+Action that starts next phase: Meeting the ghost
+
+----------------------------------Denial----------------------------------
+Visual particularities: **talk with level designer
+
+Memory: Picture of parents
+Text: There was never any other pictures than those with the two of them
+
+Action that starts anger: Getting the keys to the basement
+----------------------------------Anger----------------------------------
+Visual particularities: **talk with level designer
+
+Memory: Broken Plates
+Text: Mom wasn't happy that night.
+
+Action that starts Bargaining: Breaking the master bedroom wall
+----------------------------------Bargaining----------------------------------
 Particularities: **talk with level designer
 
--- anger
+Memory: 
+Text: 
+
+Action that starts depression: Getting the cutters in the basement
+----------------------------------Depression----------------------------------
 Particularities: **talk with level designer
 
--- bargaining
-Particularities: **talk with level designer
+Memory: Toilet
+Text: You were sick again
 
--- depression
-Particularities: **talk with level designer
+Ation that starts acceptance: Getting the broom from the kitchen
+----------------------------------Acceptance with not all memorries----------------------------------
 
--- acceptance
+----------------------------------Acceptance with all memorries----------------------------------
 Particulariitie: **talk with level designer
 Item to find: Ball in shared bedroom
 Associated text:
