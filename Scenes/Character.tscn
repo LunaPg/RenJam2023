@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scenes/Character.cs" id="1_hqdia"]
 [ext_resource type="Texture2D" uid="uid://g4g7e4djcnoj" path="res://Assets/SmolTiGars.png" id="2_xyb5s"]
 [ext_resource type="Texture2D" uid="uid://s2e2vph6ue7q" path="res://Assets/SmolTiGarsFwd1.png" id="4_mh070"]
-[ext_resource type="Texture2D" uid="uid://b3pupjiogw13k" path="res://Assets/2d_lights_and_shadows_neutral_point_light.webp" id="5_i1pev"]
+[ext_resource type="Texture2D" uid="uid://b3pupjiogw13k" path="res://Assets/2d_lights_and_shadows_neutral_point_light.webp" id="5_s0pxv"]
 [ext_resource type="Texture2D" uid="uid://1rqn7qfg3tfb" path="res://Assets/SmolTiGarsFwd2.png" id="5_stbmy"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_04oea"]
@@ -51,22 +51,6 @@ transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_ohgxy"]
 
-[sub_resource type="Animation" id="Animation_hcbqd"]
-resource_name = "idle_down"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
 [sub_resource type="Animation" id="Animation_q26pb"]
 resource_name = "walk_down"
 length = 0.5
@@ -85,6 +69,22 @@ tracks/0/keys = {
 "values": [1, 2]
 }
 
+[sub_resource type="Animation" id="Animation_hcbqd"]
+resource_name = "idle_down"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yhdxi"]
 _data = {
 "idle_down": SubResource("Animation_hcbqd"),
@@ -97,12 +97,10 @@ script = ExtResource("1_hqdia")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(6, -14)
 sprite_frames = SubResource("SpriteFrames_04oea")
+frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_uaw4a")
-
-[node name="PointLight2D" type="PointLight2D" parent="."]
-texture = ExtResource("5_i1pev")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -116,3 +114,7 @@ parameters/playback = SubResource("AnimationNodeStateMachinePlayback_ohgxy")
 libraries = {
 "": SubResource("AnimationLibrary_yhdxi")
 }
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+shadow_enabled = true
+texture = ExtResource("5_s0pxv")
