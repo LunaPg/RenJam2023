@@ -97,7 +97,7 @@ script = ExtResource("1_hqdia")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(6, -14)
 sprite_frames = SubResource("SpriteFrames_04oea")
-frame = 1
+frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_uaw4a")
@@ -118,3 +118,5 @@ libraries = {
 [node name="PointLight2D" type="PointLight2D" parent="."]
 shadow_enabled = true
 texture = ExtResource("5_s0pxv")
+texture_scale = 2.0
+height = 1.0

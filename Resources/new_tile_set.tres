@@ -1,6 +1,18 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://cpsp8vurf4br0"]
+[gd_resource type="TileSet" load_steps=7 format=3 uid="uid://cpsp8vurf4br0"]
 
 [ext_resource type="Texture2D" uid="uid://2f42nw4nfyji" path="res://Assets/Tiles/Inside_A2.png" id="1_ik0s0"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_yqdie"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_a1opa"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_rfwb0"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_rvo83"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ffi7q"]
 texture = ExtResource("1_ik0s0")
@@ -353,17 +365,21 @@ texture = ExtResource("1_ik0s0")
 15:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 15:5/0/physics_layer_0/angular_velocity = 0.0
 28:5/0 = 0
+28:5/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_yqdie")
 28:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 28:5/0/physics_layer_0/angular_velocity = 0.0
 29:5/0 = 0
+29:5/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_a1opa")
 29:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 29:5/0/physics_layer_0/angular_velocity = 0.0
 29:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 30:5/0 = 0
+30:5/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_rfwb0")
 30:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 30:5/0/physics_layer_0/angular_velocity = 0.0
 30:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 31:5/0 = 0
+31:5/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_rvo83")
 31:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 31:5/0/physics_layer_0/angular_velocity = 0.0
 0:6/0 = 0
