@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://emfqrph70hwj"]
+[gd_scene load_steps=3 format=3 uid="uid://emfqrph70hwj"]
 
 [ext_resource type="TileSet" uid="uid://bo1qhk1dg0oq7" path="res://Resources/house_tileset.tres" id="1_t64ji"]
-[ext_resource type="PackedScene" path="res://Scenes/Character.tscn" id="2_a5ogy"]
-[ext_resource type="Texture2D" uid="uid://b3pupjiogw13k" path="res://Resources/2d_lights_and_shadows_neutral_point_light.webp" id="3_khx2k"]
+[ext_resource type="PackedScene" uid="uid://cqe3yrpy87d76" path="res://Scenes/Character.tscn" id="2_a5ogy"]
 
 [node name="Test-Light" type="Node2D"]
 
@@ -21,8 +20,3 @@ layer_1/tile_data = PackedInt32Array()
 
 [node name="Character" parent="." instance=ExtResource("2_a5ogy")]
 position = Vector2(309, 355)
-
-[node name="PointLight2D" type="PointLight2D" parent="Character"]
-position = Vector2(10, 3)
-energy = 1.5
-texture = ExtResource("3_khx2k")
