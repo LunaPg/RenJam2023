@@ -7,24 +7,33 @@
 - Master bedroom (locked)
 - Shared Bedroom (Ghost doesn't follow)
 
-----------------------------------List of Interactable objects by room----------------------------------
-- Corridor
-  - Key hooks
+----------------------------------List of Memory objects by room----------------------------------
 - Living Room
-  - Picture of parents
+  - Picture of parents - Base text: I think I should know who this is...
 - Kitchen
-  - Chair with a booster
+  - Chair with a booster - Base text: This is appropriate for someone shorter
 - Dining Room
-  - Broken plates
+  - Broken plates - Base text: Let's thread carefully
 - Bathroom
-  - Toilet
-  - Sink
+  - Toilet - Base text: This is gross
+  
+----------------------------------List of Progressive objects by room----------------------------------
+- Corridor
+  - Key hooks (uninteractible after Denial)
+- Kitchen
+  - Broom (in the pantry)
+  - Pantry - Childproofed still. Something could probably get rid of this plactic.
 - Basement
-  - 
+  - Door - There must be a key for this.
+  - Cutters - This could cut just about anything (uninteractible after Bargaining)
+  - Hammer - I've always wanted to swing this and break things. (uninteractible after Anger)
 - Master Bedroom
-  - 
+  - Wall hole - Maybe I could smash this open...
 - Shared Bedroom
-  - Ball under the bed
+  - Ball under the bed - There's a ball under the bed but I can't reach... 
+
+Generic messages for no:
+- Maybe this isn't it...
 
 ----------------------------------Storyline----------------------------------
 
@@ -33,28 +42,38 @@ Outside the house
 Key under a flowerpot that's interactable (whatever that looks like)
 Meeting the ghost
 
-Action that starts next phase: Opening the basement
-
+Action that starts Denial: Getting the keys to the basement
 ----------------------------------Denial----------------------------------
-Particularities: **talk with level designer
-**gets key to basement
+Visual particularities: **talk with level designer
 
+Memory: Picture of parents
+Text: There was never any other pictures than those with the two of them
+
+Action that starts anger: Breaking the master bedroom wall
 ----------------------------------Anger----------------------------------
-Particularities: **talk with level designer
+Visual particularities: **talk with level designer
 
-***gets hammer - breaks oven
+Memory: Broken Plates
+Text: Mom wasn't happy that night.
 
+Action that starts Bargaining: 
 ----------------------------------Bargaining----------------------------------
 Particularities: **talk with level designer
 
-***gets rope from meat - Gets key from
+Memory: Chair with booster
+Text: That chair was cursed. You always cried when we sat you there.
 
+Action that starts depression: Getting the cutters in the basement
 ----------------------------------Depression----------------------------------
 Particularities: **talk with level designer
 
-**Gets Broom
+Memory: Toilet
+Text: You were sick again
 
-----------------------------------Acceptance----------------------------------
+Ation that starts acceptance: Getting the broom from the kitchen
+----------------------------------Acceptance with not all memorries----------------------------------
+
+----------------------------------Acceptance with all memorries----------------------------------
 Particulariitie: **talk with level designer
 Item to find: Ball in shared bedroom
 Associated text:
