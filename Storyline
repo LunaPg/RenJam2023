@@ -25,8 +25,10 @@
   - Pantry - Childproofed still. Something could probably get rid of this plactic.
 - Basement
   - Door - There must be a key for this.
-  - Cutters - This could cut just about anything (uninteractible after Bargaining)
   - Hammer - I've always wanted to swing this and break things. (uninteractible after Anger)
+  - Door in basement - This seems locked from the inside.
+- Bathroom
+  - Vanity - Makeup stash? I'm gonna need a small key.
 - Master Bedroom
   - Wall hole - Maybe I could smash this open...
 - Shared Bedroom
@@ -56,21 +58,21 @@ Visual particularities: **talk with level designer
 Memory: Broken Plates
 Text: Mom wasn't happy that night.
 
-Action that starts Bargaining: 
+Action that starts Bargaining: Small key
 ----------------------------------Bargaining----------------------------------
 Particularities: **talk with level designer
 
 Memory: Chair with booster
 Text: That chair was cursed. You always cried when we sat you there.
 
-Action that starts depression: Getting the cutters in the basement
+Action that starts depression: Getting cutter from the bathroom
 ----------------------------------Depression----------------------------------
 Particularities: **talk with level designer
 
 Memory: Toilet
 Text: You were sick again
 
-Ation that starts acceptance: Getting the broom from the kitchen
+Ation that starts acceptance: Getting broom from the pantry
 ----------------------------------Acceptance with not all memorries----------------------------------
 
 ----------------------------------Acceptance with all memorries----------------------------------
