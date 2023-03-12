@@ -1,11 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://ccq1p4ikso8v4"]
+[gd_scene load_steps=13 format=3 uid="uid://ccq1p4ikso8v4"]
 
 [ext_resource type="PackedScene" uid="uid://cqe3yrpy87d76" path="res://Scenes/Character.tscn" id="2_3s0ej"]
 [ext_resource type="TileSet" uid="uid://cpsp8vurf4br0" path="res://Resources/new_tile_set.tres" id="2_g3wjm"]
 [ext_resource type="PackedScene" uid="uid://dt2616cj24p2v" path="res://Scenes/Rooms/Kitchen.tscn" id="2_pmdwa"]
 [ext_resource type="Script" path="res://Scripts/Dialogue/DialogueTrigger.cs" id="3_bc44s"]
 [ext_resource type="PackedScene" uid="uid://bjdbrru8mcu5k" path="res://Scenes/inventory.tscn" id="3_o6ria"]
-[ext_resource type="PackedScene" uid="uid://73jm5qjy52vq" path="res://Scripts/Dialogue/balloon.tscn" id="4_33fmr"]
+[ext_resource type="PackedScene" uid="uid://mcsih6s0dp8e" path="res://Scenes/Rooms/Bathroom.tscn" id="3_rtbaw"]
 [ext_resource type="Resource" uid="uid://dlwk4w6ucl76r" path="res://Resources/test.dialogue" id="5_k32t1"]
 [ext_resource type="Texture2D" uid="uid://dptystwtsk8uo" path="res://Assets/SmolGhostie.png" id="6_3i2tg"]
 [ext_resource type="AudioStream" uid="uid://bar2u745vqctg" path="res://Assets/Musics/42b4b.ogg" id="7_byvhd"]
@@ -22,6 +22,9 @@ position = Vector2(-168, 344)
 
 [node name="Kitchen" parent="." instance=ExtResource("2_pmdwa")]
 position = Vector2(-168, 136)
+
+[node name="Bathroom" parent="." instance=ExtResource("3_rtbaw")]
+position = Vector2(616, -2)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("2_g3wjm")
@@ -47,7 +50,7 @@ layer_2/tile_data = PackedInt32Array()
 
 [node name="Character" parent="." instance=ExtResource("2_3s0ej")]
 position = Vector2(517, 793)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.35, 0.35)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.317647, 0.317647, 0.317647, 1)
@@ -56,9 +59,8 @@ color = Color(0.317647, 0.317647, 0.317647, 1)
 position = Vector2(541, 543)
 input_pickable = false
 script = ExtResource("3_bc44s")
-Balloon = ExtResource("4_33fmr")
-Title = "convo_test"
 DialogueResource = ExtResource("5_k32t1")
+Title = "convo_test"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_wlv6y")

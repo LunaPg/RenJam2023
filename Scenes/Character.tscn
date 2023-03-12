@@ -283,6 +283,7 @@ position = Vector2(0.5, 30)
 shape = SubResource("RectangleShape2D_od2vo")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeStateMachine_6w63x")
