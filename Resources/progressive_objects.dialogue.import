@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_7"
+type="Resource"
+uid="uid://btqdwkhtejp3n"
+path="res://.godot/imported/progressive_objects.dialogue-6c40b7e54b115d12ee121c63917c04be.tres"
+
+[deps]
+
+source_file="res://Resources/progressive_objects.dialogue"
+dest_files=["res://.godot/imported/progressive_objects.dialogue-6c40b7e54b115d12ee121c63917c04be.tres"]
+
+[params]
+

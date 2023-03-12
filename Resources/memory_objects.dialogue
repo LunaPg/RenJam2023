@@ -1,23 +1,36 @@
-~ picture_memory_notdenial
+~ picture_memory
 
-SmolTiGarsPortrait: I think I should know who this is...
-
-=> END
-
-~ plates_memory_notanger
-
-SmolTiGarsPortrait: This is appropriate for someone shorter
+if GameProgress.grief_stage != Denial
+	SmolTiGarsPortrait: I think I should know who this is...
+else
+	SmolTiGarsPortrait: There was never any other pictures than those with the two of them in this house.
 
 => END
 
-~ chair_memory_notbargaining
+~ plates_memory
 
-SmolTiGarsPortrait: I think I should know who this is...
+if GameProgress.grief_stage != Anger
+	SmolTiGarsPortrait: Let's thread carefully.
+else
+	SmolTiGarsPortrait: Mom cried a lot that night. Dad however...
+
+=> END
+
+~ chair_memory
+
+if GameProgress.grief_stage != Bargaining
+	SmolTiGarsPortrait: This is appropriate for someone shorter.
+else
+	SmolTiGarsPortrait: That chair was cursed. You always cried when we sat you there.
+	SmolGhostiePortrait: *Visibly pained*
 
 => END
 
 ~ toilet_memory_notdepression
 
-SmolTiGarsPortrait: I think I should know who this is...
+if GameProgress.grief_stage != Depression
+	SmolTiGarsPortrait: This is gross.
+else
+	SmolTiGarsPortrait: You were sick again. You couldn't keep anything down and no one knew why.
 
 => END
