@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_7"
+type="Resource"
+uid="uid://g47kav2rg3w7"
+path="res://.godot/imported/denial.dialogue-e6d6110c4f2aa1db95f92f2970e6f32e.tres"
+
+[deps]
+
+source_file="res://Resources/denial.dialogue"
+dest_files=["res://.godot/imported/denial.dialogue-e6d6110c4f2aa1db95f92f2970e6f32e.tres"]
+
+[params]
+
