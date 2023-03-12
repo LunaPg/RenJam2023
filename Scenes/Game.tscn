@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://ccq1p4ikso8v4"]
+[gd_scene load_steps=16 format=3 uid="uid://ccq1p4ikso8v4"]
 
 [ext_resource type="PackedScene" uid="uid://cqe3yrpy87d76" path="res://Scenes/Character.tscn" id="2_3s0ej"]
 [ext_resource type="TileSet" uid="uid://cpsp8vurf4br0" path="res://Resources/new_tile_set.tres" id="2_g3wjm"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b1b7cce6e5ywe" path="res://Scenes/Rooms/MasterBedroom.tscn" id="5_injbv"]
 [ext_resource type="Resource" uid="uid://dlwk4w6ucl76r" path="res://Resources/test.dialogue" id="5_k32t1"]
 [ext_resource type="Texture2D" uid="uid://dptystwtsk8uo" path="res://Assets/SmolGhostie.png" id="6_3i2tg"]
+[ext_resource type="PackedScene" uid="uid://2wwtpbyv68mx" path="res://Scenes/Rooms/LivingRoom.tscn" id="6_72vxv"]
 [ext_resource type="AudioStream" uid="uid://bar2u745vqctg" path="res://Assets/Musics/42b4b.ogg" id="7_byvhd"]
 [ext_resource type="PackedScene" uid="uid://brltkgsrwjf3s" path="res://Scenes/Interactables/CameraRoll.tscn" id="8_depsb"]
 [ext_resource type="PackedScene" uid="uid://csxmlldx3ybmo" path="res://Scenes/Rooms/DiningRoom.tscn" id="9_k47s2"]
@@ -33,6 +34,9 @@ position = Vector2(-99, -215)
 
 [node name="MasterBedroom" parent="." instance=ExtResource("5_injbv")]
 position = Vector2(616, -377)
+
+[node name="LivingRoom" parent="." instance=ExtResource("6_72vxv")]
+position = Vector2(606, 326)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("2_g3wjm")
