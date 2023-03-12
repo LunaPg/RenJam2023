@@ -1,22 +1,26 @@
 using Godot;
-using Godot.Collections;
 using System;
 
-
-public partial class inventory : Node
+public partial class Inventory : Node
 {
-	public Item ItemInHand = null;
 
-	public void pickItem(Item item) {
-		if (this.ItemInHand != null){
-			throw new Exception("Already have something !");
+ [Export]
+ Button itemButton;
+
+	public void PickItem(string itemName){
+		Catalog catalog =  GetNode<Catalog>("/root/Catalog");
+		Item item = catalog.findItem(itemName);
+		itemButton.Icon = item.icon;
 		}
-		this.ItemInHand = item;
-	}
-	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		this.itemButton = new Button();
+		this.itemButton.Text = "film";
+    AddChild(itemButton);
+
+		// Testing purpose : Add item in inventory on spawn
+		this.PickItem("film");
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.

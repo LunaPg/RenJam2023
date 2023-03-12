@@ -1,12 +1,57 @@
-[gd_scene load_steps=2 format=3 uid="uid://bjdbrru8mcu5k"]
+[gd_scene load_steps=6 format=3 uid="uid://bjdbrru8mcu5k"]
 
+[ext_resource type="Script" path="res://Scripts/Inventory.cs" id="1_27tmn"]
 [ext_resource type="Script" path="res://Scripts/Catalog.cs" id="1_oy3i3"]
+[ext_resource type="Texture2D" uid="uid://d5vktla5savs" path="res://Assets/CameraRollSmol.png" id="1_rsf8g"]
+[ext_resource type="Script" path="res://Scripts/Item.cs" id="2_fjno5"]
 
-[node name="inventory" type="Node2D"]
+[sub_resource type="ImageTexture" id="ImageTexture_ens64"]
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_27tmn")
+
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+layout_direction = 3
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -47.0
+offset_top = 0.5
+offset_right = 3.0
+offset_bottom = 19.5
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.974348, 0.917417)
+theme_override_icons/grabber = ExtResource("1_rsf8g")
+split_offset = 7
+
+[node name="ItemButton" type="Button" parent="HSplitContainer"]
+layout_mode = 2
+icon = SubResource("ImageTexture_ens64")
+alignment = 2
+clip_text = true
+
+[node name="Catalog" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(1.02021, 0.948586)
 script = ExtResource("1_oy3i3")
+CatalogNodes = Array[Node]([null, null])
+
+[node name="Item" type="Control" parent="Catalog"]
+anchors_preset = 0
+offset_left = 882.171
+offset_right = 1154.17
+offset_bottom = 94.0
+scale = Vector2(0.926685, 0.946329)
+script = ExtResource("2_fjno5")
+name = "film"
+imageTexture = ExtResource("1_rsf8g")
