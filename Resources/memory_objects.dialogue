@@ -1,23 +1,26 @@
-~ picture_memory_notdenial
+~ picture_memory
 
-SmolTiGarsPortrait: I think I should know who this is...
+if GameProgress.grief_stage != Denial
+	SmolTiGarsPortrait: I think I should know who this is...
+else
+	SmolTiGarsPortrait: There was never any other pictures than those with the two of them in this house.
 
 => END
 
 ~ plates_memory_notanger
 
-SmolTiGarsPortrait: This is appropriate for someone shorter
+SmolTiGarsPortrait: Let's thread carefully.
 
 => END
 
 ~ chair_memory_notbargaining
 
-SmolTiGarsPortrait: I think I should know who this is...
+SmolTiGarsPortrait: This is appropriate for someone shorter.
 
 => END
 
 ~ toilet_memory_notdepression
 
-SmolTiGarsPortrait: I think I should know who this is...
+SmolTiGarsPortrait: This is gross.
 
 => END
