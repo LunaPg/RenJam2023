@@ -9,11 +9,15 @@
 [ext_resource type="Texture2D" uid="uid://dptystwtsk8uo" path="res://Assets/SmolGhostie.png" id="6_3i2tg"]
 [ext_resource type="AudioStream" uid="uid://bar2u745vqctg" path="res://Assets/Musics/42b4b.ogg" id="7_byvhd"]
 [ext_resource type="PackedScene" uid="uid://brltkgsrwjf3s" path="res://Scenes/Interactables/CameraRoll.tscn" id="8_depsb"]
+[ext_resource type="PackedScene" uid="uid://csxmlldx3ybmo" path="res://Scenes/Rooms/Kitchen.tscn" id="9_k47s2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wlv6y"]
 radius = 42.0119
 
 [node name="Game" type="Node2D"]
+
+[node name="Kitchen" parent="." instance=ExtResource("9_k47s2")]
+position = Vector2(-168, 344)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("2_g3wjm")
@@ -64,4 +68,4 @@ stream = ExtResource("7_byvhd")
 autoplay = true
 
 [node name="CameraRoll" parent="." instance=ExtResource("8_depsb")]
-position = Vector2(460, 696)
+position = Vector2(554, 331)

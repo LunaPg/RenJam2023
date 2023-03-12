@@ -3,19 +3,19 @@
     {
       "name": "Picture of parents",
       "description": "I think I should know who this is...",
-      "icon": "GrossToilet.png",
+      "icon": "PictureFrame.png",
       "type": "memory"
     },
     {
       "name": "Chair with a booster",
       "description": "This is appropriate for someone shorter",
-      "icon": "GrossToilet.png",
+      "icon": "BoosterChair.png",
       "type": "memory"
     },
     {
       "name": "Broken plates",
       "description": "Let's thread carefully",
-      "icon": "GrossToilet.png",
+      "icon": "BrokenPlates.png",
       "type": "memory"
     },
     {
@@ -27,43 +27,43 @@
     {
       "name": "Key hooks",
       "description": "Key hooks",
-      "icon": "GrossToilet.png",
+      "icon": "Narrator.png",
       "type": "progressive"
     },
     {
       "name": "Broom",
       "description": "Broom (in the pantry)",
-      "icon": "GrossToilet.png",
+      "icon": "Broom.png",
       "type": "progressive"
     },
     {
       "name": "Pantry",
       "description": "Childproofed still. Something could probably get rid of this plactic.",
-      "icon": "GrossToilet.png",
+      "icon": "Narrator.png",
       "type": "progressive"
     },
     {
       "name": "Door in basement",
       "description": "This seems locked from the inside.",
-      "icon": "GrossToilet.png",
+      "icon": "Narrator.png",
       "type": "progressive"
     },
     {
       "name": "Vanity",
       "description": "Makeup stash? I'm gonna need a small key.",
-      "icon": "GrossToilet.png",
+      "icon": "Vanity.png",
       "type": "progressive"
     },
     {
       "name": "Wall hole",
       "description": "Maybe I could smash this open..",
-      "icon": "GrossToilet.png",
+      "icon": "Narrator.png",
       "type": "progressive"
     },
     {
       "name": "Ball under the bed",
       "description": "There's a ball under the bed but I can't reach...",
-      "icon": "GrossToilet.png",
+      "icon": "Ball.png",
       "type": "progressive"
     }
   ]
