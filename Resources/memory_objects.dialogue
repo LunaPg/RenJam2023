@@ -7,9 +7,12 @@ else
 
 => END
 
-~ plates_memory_notanger
+~ plates_memory
 
-SmolTiGarsPortrait: Let's thread carefully.
+if GameProgress.grief_stage != Anger
+	SmolTiGarsPortrait: Let's thread carefully.
+else
+	SmolTiGarsPortrait: Mom cried a lot that night. Dad however...
 
 => END
 
