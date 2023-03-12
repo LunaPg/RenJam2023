@@ -7,6 +7,7 @@ public partial class Character : CharacterBody2D
 
 	public bool InputEnabled { get; set; }
 
+	private AnimationTree _animationTree;
 	private AnimationNodeStateMachinePlayback _animStateMachine;
 	private Direction _currentDirection;
 	private bool _isWalking;
@@ -14,8 +15,8 @@ public partial class Character : CharacterBody2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		var animationTree = GetNode<AnimationTree>("AnimationTree");
-		_animStateMachine = (AnimationNodeStateMachinePlayback)animationTree.Get("parameters/playback");
+		_animationTree = GetNode<AnimationTree>("AnimationTree");
+		_animStateMachine = (AnimationNodeStateMachinePlayback)_animationTree.Get("parameters/playback");
 
 		InputEnabled = true;
 	}
@@ -27,6 +28,8 @@ public partial class Character : CharacterBody2D
 		Velocity = direction * Speed;
 		if (direction.Length() > 0){
 			_animStateMachine.Travel("walk");
+			_animationTree.Set("parameters/idle/blend_position", direction);
+			_animationTree.Set("parameters/walk/blend_position", direction);
 		}
 		else {
 			_animStateMachine.Travel("idle");
