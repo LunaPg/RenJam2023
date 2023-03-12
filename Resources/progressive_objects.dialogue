@@ -21,7 +21,7 @@ else
 if GameProgress.grief_stage != Denial
 	=> no_pickup
 else
-	SmolTiGarsPortrait: TBD
+	SmolTiGarsPortrait: I've always wanted to swing this and break things.
 	do Inventory.pickup("hammer")
 set GameProgress.grief_stage = Anger
 
@@ -30,9 +30,9 @@ set GameProgress.grief_stage = Anger
 ~ wall_masterbedroom
 
 if GameProgress.grief_stage != Anger
-	=> no_pickup
+	SmolTiGarsPortrait: Maybe I could smash this open...
 else
-	SmolTiGarsPortrait: TBD
+	SmolTiGarsPortrait: That felt good. Let's ransack this place.
 	do Inventory.remove()
 
 => END
@@ -42,7 +42,7 @@ else
 if GameProgress.grief_stage != Anger
 	=> no_pickup
 else
-	SmolTiGarsPortrait: TBD
+	SmolTiGarsPortrait: Figures this would be out of reach. If only I'd known...
 	do Inventory.pickup("smallkey")
 set GameProgress.grief_stage = Bargaining
 
@@ -51,9 +51,10 @@ set GameProgress.grief_stage = Bargaining
 ~ vanity_bathroom
 
 if GameProgress.grief_stage != Bargaining
-	=> no_pickup
+	SmolTiGarsPortrait: I'm gonna need a small key for this.
 else
-	SmolTiGarsPortrait: TBD
+	SmolTiGarsPortrait: I didn't think this would be kept here.
+	SmolTiGarsPortrait: Now that I think about it... I'm not surprised.
 	do Inventory.remove()
 
 => END
@@ -63,7 +64,7 @@ else
 if GameProgress.grief_stage != Bargaining
 	=> no_pickup
 else
-	SmolTiGarsPortrait: TBD
+	SmolTiGarsPortrait: What if I'm doing all this for nothing?
 	do Inventory.pickup("cutter")
 set GameProgress.grief_stage = Depression
 
@@ -72,7 +73,7 @@ set GameProgress.grief_stage = Depression
 ~ pantry_kitchen
 
 if GameProgress.grief_stage != Depression
-	=> no_pickup
+	SmolTiGarsPortrait: Childproofed still. Something could probably get rid of this plactic.
 else
 	SmolTiGarsPortrait: TBD
 	do Inventory.remove()
@@ -102,5 +103,16 @@ if GameProgress.grief_stage == Acceptance and GameProgress.memory_count == 4
 else
 	SmolTiGarsPortrait: TBD
 do Inventory.remove()
+
+#Needs a variable for basement door.
+
+=> END
+
+~ door_basement
+
+if GameProgress.grief_stage != Acceptance
+	SmolTiGarsPortrait: This seems locked from the inside.
+else
+	do Inventory.pickup("ball")
 
 => END
