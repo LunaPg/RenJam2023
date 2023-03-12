@@ -6,6 +6,7 @@ public partial class DialogueUiManager : Node
     PackedScene balloon;
 	Character character;
 	Callable dialogueFinishedCallable;
+	Action onFinishedCallback;
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -14,10 +15,12 @@ public partial class DialogueUiManager : Node
 		balloon = GD.Load<PackedScene>("res://Scripts/Dialogue/balloon.tscn");
 	}
 
-	public async void StartDialogue(Resource dialogueResource, string dialogueTitle)
+	public async void StartDialogue(Resource dialogueResource, string dialogueTitle, Action onFinished = null)
 	{
 		character = GetNode<Character>("/root/Node/Game/Character");
 		character.InputEnabled = false;
+
+		onFinishedCallback = onFinished;
 
 		Engine.GetSingleton("DialogueManager").Connect("dialogue_finished", dialogueFinishedCallable);
 
@@ -32,5 +35,10 @@ public partial class DialogueUiManager : Node
     {
 		Engine.GetSingleton("DialogueManager").Disconnect("dialogue_finished", dialogueFinishedCallable);
 		character.InputEnabled = true;
+		if (onFinishedCallback != null)
+		{
+			onFinishedCallback();
+			onFinishedCallback = null;
+		}
     }
 }
