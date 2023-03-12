@@ -1,5 +1,21 @@
 ~ flowerpot
 
 SmolTiGarsPortrait: There's a key under this flowerpot. Has anyone told them this isn't safe?
+SmolTiGarsPortrait: Should I take it?
+- Pick it up
+	You're the proud owner of a key! And maybe a house?
+- Leave it on the ground
+	You might need this to be honest...
+
+=> END
+
+~ meeting_ghost
+
+SmolTiGarsPortrait: Hello there. You seem odd. I don't know why but I feel happy to see you.
+SmolGhostiePortrait: *Smiles*
+SmolTiGarsPortrait: Is this a dream?
+SmolGhostiePortrait: *Confused*
+SmolTiGarsPortrait: I don't want to be alone in here and I think that neither do you.
+SmolTiGarsPortrait: Shall we visit together?
 
 => END
