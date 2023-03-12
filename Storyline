@@ -44,7 +44,12 @@ Outside the house
 Key under a flowerpot that's interactable (whatever that looks like)
 Meeting the ghost
 
+Text:
+Hello there. You seem odd. I don't know why but I feel happy to see you. Is this a dream?
+Shall we visit together? I don't want to be alone in here and I think that neither do you.
+
 Action that starts Denial: Getting the keys to the basement
+Text: Just a simple key. I wonder if this will guide me home.
 ----------------------------------Denial----------------------------------
 Visual particularities: **talk with level designer
 
