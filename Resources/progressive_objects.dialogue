@@ -12,6 +12,7 @@ if GameProgress.grief_stage != Denial
 	=> no_pickup
 else
 	SmolTiGarsPortrait: Just a simple key. I wonder if this will guide me home.
+	do Inventory.pickup("corridor_key")
 
 => END
 
@@ -21,6 +22,7 @@ if GameProgress.grief_stage != Denial
 	=> no_pickup
 else
 	SmolTiGarsPortrait: TBD
+	do Inventory.pickup("hammer")
 set GameProgress.grief_stage = Anger
 
 => END
@@ -31,6 +33,7 @@ if GameProgress.grief_stage != Anger
 	=> no_pickup
 else
 	SmolTiGarsPortrait: TBD
+	do Inventory.remove()
 
 => END
 
@@ -40,6 +43,7 @@ if GameProgress.grief_stage != Anger
 	=> no_pickup
 else
 	SmolTiGarsPortrait: TBD
+	do Inventory.pickup("smallkey")
 set GameProgress.grief_stage = Bargaining
 
 => END
@@ -50,6 +54,7 @@ if GameProgress.grief_stage != Bargaining
 	=> no_pickup
 else
 	SmolTiGarsPortrait: TBD
+	do Inventory.remove()
 
 => END
 
@@ -59,6 +64,7 @@ if GameProgress.grief_stage != Bargaining
 	=> no_pickup
 else
 	SmolTiGarsPortrait: TBD
+	do Inventory.pickup("cutter")
 set GameProgress.grief_stage = Depression
 
 => END
@@ -69,6 +75,7 @@ if GameProgress.grief_stage != Depression
 	=> no_pickup
 else
 	SmolTiGarsPortrait: TBD
+	do Inventory.remove()
 
 => END
 
@@ -78,6 +85,7 @@ if GameProgress.grief_stage != Depression
 	=> no_pickup
 else
 	SmolTiGarsPortrait: TBD
+	do Inventory.pickup("broom")
 set GameProgress.grief_stage = Acceptance
 
 => END
@@ -86,9 +94,13 @@ set GameProgress.grief_stage = Acceptance
 
 if GameProgress.grief_stage != Depression
 	=> no_pickup
-else if GameProgress.grief_stage == Acceptance and GameProgress.memory_count == 4
+else
+	do Inventory.pickup("ball")
+
+if GameProgress.grief_stage == Acceptance and GameProgress.memory_count == 4
 	SmolTiGarsPortrait: TBD
 else
 	SmolTiGarsPortrait: TBD
+do Inventory.remove()
 
 => END
