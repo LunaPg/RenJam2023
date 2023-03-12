@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://caeewgoop75rl"]
+[gd_scene load_steps=9 format=3 uid="uid://caeewgoop75rl"]
 
 [ext_resource type="PackedScene" uid="uid://cqe3yrpy87d76" path="res://Scenes/Character.tscn" id="2_3s0ej"]
 [ext_resource type="TileSet" uid="uid://cpsp8vurf4br0" path="res://Resources/new_tile_set.tres" id="2_g3wjm"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://73jm5qjy52vq" path="res://Scripts/Dialogue/balloon.tscn" id="4_33fmr"]
 [ext_resource type="Resource" uid="uid://dlwk4w6ucl76r" path="res://Resources/test.dialogue" id="5_k32t1"]
 [ext_resource type="Texture2D" uid="uid://dptystwtsk8uo" path="res://Assets/SmolGhostie.png" id="6_3i2tg"]
+[ext_resource type="AudioStream" path="res://Assets/Music/42b4b.ogg" id="7_jrfiv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wlv6y"]
 radius = 42.0119
@@ -53,3 +54,7 @@ shape = SubResource("CircleShape2D_wlv6y")
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_3i2tg")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_jrfiv")
+autoplay = true
