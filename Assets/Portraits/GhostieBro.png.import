@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dji1k2lv4wvex"
-path="res://.godot/imported/End.png-a171c4de206b3208d7e6d0ef031f3f22.ctex"
+uid="uid://ci30avlcxp6nc"
+path="res://.godot/imported/GhostieBro.png-8ec696046289554b5f850dc8ace1bcf8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/End.png"
-dest_files=["res://.godot/imported/End.png-a171c4de206b3208d7e6d0ef031f3f22.ctex"]
+source_file="res://Assets/Portraits/GhostieBro.png"
+dest_files=["res://.godot/imported/GhostieBro.png-8ec696046289554b5f850dc8ace1bcf8.ctex"]
 
 [params]
 

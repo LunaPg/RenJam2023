@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dji1k2lv4wvex"
-path="res://.godot/imported/End.png-a171c4de206b3208d7e6d0ef031f3f22.ctex"
+uid="uid://tebxw4u6g57m"
+path="res://.godot/imported/SmolGhostie_confused.png-b459f0145c14bac9528ca8f6081dbec1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/End.png"
-dest_files=["res://.godot/imported/End.png-a171c4de206b3208d7e6d0ef031f3f22.ctex"]
+source_file="res://Assets/Portraits/SmolGhostie_confused.png"
+dest_files=["res://.godot/imported/SmolGhostie_confused.png-b459f0145c14bac9528ca8f6081dbec1.ctex"]
 
 [params]
 
