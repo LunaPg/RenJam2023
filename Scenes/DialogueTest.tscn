@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://bc2401bndmqne"]
+
+[ext_resource type="Script" path="res://Scenes/DialogueTest.cs" id="1_dixye"]
+[ext_resource type="PackedScene" uid="uid://73jm5qjy52vq" path="res://addons/dialogue_manager/example_balloon/example_balloon.tscn" id="2_bk408"]
+[ext_resource type="Resource" uid="uid://dlwk4w6ucl76r" path="res://Resources/test.dialogue" id="4_cce3o"]
+
+[node name="DialogueTest" type="Node2D"]
+script = ExtResource("1_dixye")
+Balloon = ExtResource("2_bk408")
+Title = "convo_test"
+DialogueResource = ExtResource("4_cce3o")

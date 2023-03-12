@@ -6,7 +6,6 @@
 - Basement (locked) --> Resolution path (Ghost doesn't follow until acceptance phase and if you have given him the ball)
 - Master bedroom (locked)
 - Shared Bedroom (Ghost doesn't follow)
-
 ----------------------------------List of Memory objects by room----------------------------------
 - Living Room
   - Picture of parents - Base text: I think I should know who this is...
@@ -16,7 +15,6 @@
   - Broken plates - Base text: Let's thread carefully
 - Bathroom
   - Toilet - Base text: This is gross
-  
 ----------------------------------List of Progressive objects by room----------------------------------
 - Corridor
   - Key hooks (uninteractible after Denial)
@@ -36,15 +34,21 @@
 
 Generic messages for no:
 - Maybe this isn't it...
-
 ----------------------------------Storyline----------------------------------
 
 ----------------------------------Tutorial----------------------------------
 Outside the house
 Key under a flowerpot that's interactable (whatever that looks like)
+Text: A key to get in no doubt.
 Meeting the ghost
 
+Text:
+Hello there. You seem odd. I don't know why but I feel happy to see you. Is this a dream?
+I don't want to be alone in here and I think that neither do you.
+Shall we visit together?
+
 Action that starts Denial: Getting the keys to the basement
+Text: Just a simple key. I wonder if this will guide me home.
 ----------------------------------Denial----------------------------------
 Visual particularities: **talk with level designer
 
@@ -74,7 +78,19 @@ Text: You were sick again
 
 Ation that starts acceptance: Getting broom from the pantry
 ----------------------------------Acceptance with not all memorries----------------------------------
+Item to find: Ball in shared bedroom
+Associated text:
+- What am I going to do with this? Maybe it belonged to someone?
 
+**Ghost is finally interactable when you leave the room.
+**Interact with ghost with ball prompts this
+- Is this yours? It is isn't it?
+- You lived here. Think you can help me with that door downstairs?
+
+**Ghost will now follow you in basement to unlock the door of the wardrobe from the inside
+- There was someone with you. Is this who you're looking for?
+- You can't leave without this person, can you?
+**Fade to black or something like that
 ----------------------------------Acceptance with all memorries----------------------------------
 Particulariitie: **talk with level designer
 Item to find: Ball in shared bedroom
@@ -92,6 +108,7 @@ Associated text:
 
 **Ghost will now follow you in basement to unlock the door of the wardrobe from the inside
 - There you are. I've been looking all over for you little brother.
-- But see it's both of us. We're still together, aren't we?
-- I promised I'd keep you safe, didn't I? So let's go together. Even now, I will.
+- They starved you again. They never wanted us around, didn't they?
+- But I wanted you. I wanted us to stay together.
+- I promised I'd keep you safe, didn't I? So let's stay together and even now, I will kee you safe.
 **Character transforms into ghost. Both smile

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1haj0kafeiwb"
-path="res://.godot/imported/interior.png-649b7b06e280d1dcb563247e539c9907.ctex"
+uid="uid://cij60blfxpa4b"
+path="res://.godot/imported/SmolGhostiePortrait.png-20122ce8bee8bce68ec88c47b03a6287.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/interior.png"
-dest_files=["res://.godot/imported/interior.png-649b7b06e280d1dcb563247e539c9907.ctex"]
+source_file="res://Assets/Portraits/SmolGhostiePortrait.png"
+dest_files=["res://.godot/imported/SmolGhostiePortrait.png-20122ce8bee8bce68ec88c47b03a6287.ctex"]
 
 [params]
 
