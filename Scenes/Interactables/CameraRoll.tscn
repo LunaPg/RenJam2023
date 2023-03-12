@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://brltkgsrwjf3s"]
+
+[ext_resource type="Script" path="res://Scenes/Interactables/CameraRoll.cs" id="1_p1fi7"]
+[ext_resource type="Texture2D" uid="uid://bxe5ay78hpfos" path="res://Assets/CameraRollSmol.png" id="2_c8jdp"]
+[ext_resource type="Texture2D" uid="uid://dgu60uybup4fj" path="res://Assets/key_E.png" id="3_8xn3e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i6b7d"]
+radius = 51.0098
+
+[node name="CameraRoll" type="Node2D"]
+script = ExtResource("1_p1fi7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4, -3)
+texture = ExtResource("2_c8jdp")
+
+[node name="InteractionRange" type="Area2D" parent="."]
+
+[node name="InteractionShape" type="CollisionShape2D" parent="InteractionRange"]
+shape = SubResource("CircleShape2D_i6b7d")
+
+[node name="Tooltip" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(28, -37)
+scale = Vector2(0.475, 0.475)
+texture = ExtResource("3_8xn3e")
+
+[connection signal="body_entered" from="InteractionRange" to="." method="OnInteractionAreaEntered"]
+[connection signal="body_exited" from="InteractionRange" to="." method="OnInteractionAreaExited"]
