@@ -8,111 +8,142 @@ Narrator: [[Maybe this isn't it.|It's not the time for this.|Leave it alone, wil
 
 ~ keyhooks_corridor
 
-if GameProgress.grief_stage != Denial
-	=> no_pickup
+SmolTiGarsPortrait: Just a simple key. I wonder if this will guide me home.
+do Inventory.pickup("corridor_key")
+
+=> END
+
+~ basement_door
+
+if Iventory.has("corridor_key")
+	SmolTiGarsPortrait: I wonder if this will lead me to where I want to go.
+	do Inventory.remove()
 else
-	SmolTiGarsPortrait: Just a simple key. I wonder if this will guide me home.
-	do Inventory.pickup("corridor_key")
+	SmolTiGarsPortrait: I need a key for this door.
 
 => END
 
 ~ hammer_basement
 
-if GameProgress.grief_stage != Denial
-	=> no_pickup
-else
-	SmolTiGarsPortrait: I've always wanted to swing this and break things.
-	do Inventory.pickup("hammer")
+SmolTiGarsPortrait: I've always wanted to swing this and break things.
+do Inventory.pickup("hammer")
 set GameProgress.grief_stage = Anger
 
 => END
 
 ~ wall_masterbedroom
 
-if GameProgress.grief_stage != Anger
-	SmolTiGarsPortrait: Maybe I could smash this open...
-else
+if Iventory.has("hammer")
 	SmolTiGarsPortrait: That felt good. Let's ransack this place.
 	do Inventory.remove()
+else
+	SmolTiGarsPortrait: Maybe I could smash this open...
 
 => END
 
 ~ smallkey_masterbedroom
 
-if GameProgress.grief_stage != Anger
-	=> no_pickup
-else
-	SmolTiGarsPortrait: Figures this would be out of reach. If only I'd known...
-	do Inventory.pickup("smallkey")
+SmolTiGarsPortrait: Figures this would be out of reach. If only I'd known...
+do Inventory.pickup("smallkey")
 set GameProgress.grief_stage = Bargaining
 
 => END
 
 ~ vanity_bathroom
 
-if GameProgress.grief_stage != Bargaining
-	SmolTiGarsPortrait: I'm gonna need a small key for this.
-else
+if Iventory.has("smallkey")
 	SmolTiGarsPortrait: I didn't think this would be kept here.
 	SmolTiGarsPortrait: Now that I think about it... I'm not surprised.
 	do Inventory.remove()
+else
+	SmolTiGarsPortrait: I'm gonna need a small key for this.
 
 => END
 
 ~ cutter_bathroom
 
-if GameProgress.grief_stage != Bargaining
-	=> no_pickup
-else
-	SmolTiGarsPortrait: What if I'm doing all this for nothing?
-	do Inventory.pickup("cutter")
+SmolTiGarsPortrait: What if I'm doing all this for nothing?
+do Inventory.pickup("cutter")
 set GameProgress.grief_stage = Depression
 
 => END
 
 ~ pantry_kitchen
 
-if GameProgress.grief_stage != Depression
-	SmolTiGarsPortrait: Childproofed still. Something could probably get rid of this plactic.
-else
-	SmolTiGarsPortrait: TBD
+if Iventory.has("pantry_kitchen")
+	SmolTiGarsPortrait: Finally opened. Maybe I can find something useful in here.
 	do Inventory.remove()
+else
+	SmolTiGarsPortrait: Childproofed still. Something could probably get rid of this plactic.
 
 => END
 
 ~ broom_kitchen
 
-if GameProgress.grief_stage != Depression
-	=> no_pickup
-else
-	SmolTiGarsPortrait: TBD
-	do Inventory.pickup("broom")
+SmolTiGarsPortrait: Maybe this can be useful for hard to reach places.
+SmolTiGarsPortrait: Maybe this dream will end now.
+do Inventory.pickup("broom")
 set GameProgress.grief_stage = Acceptance
 
 => END
 
 ~ bed_sharedbedroom
 
-if GameProgress.grief_stage != Depression
-	=> no_pickup
+if Iventory.has("broom")
+	if GameProgress.memory_count == 4
+		SmolTiGarsPortrait: This old thing. It's a wonder it never broke after all this time.
+		SmolTiGarsPortrait: I loved this.
+		SmolTiGarsPortrait: So did you, right?
+		do Inventory.pickup("ball")
+	else
+		SmolTiGarsPortrait: An old ball.
 else
-	do Inventory.pickup("ball")
+	SmolTiGarsPortrait: There's a ball under the bed but I can't reach... 
 
-if GameProgress.grief_stage == Acceptance and GameProgress.memory_count == 4
-	SmolTiGarsPortrait: TBD
+=> END
+
+~ smolghostie_withball
+
+if Iventory.has("ball")
+	if GameProgress.memory_count == 4
+		SmolTiGarsPortrait: Do you remember?
+		SmolGhostie_smile: ...
+		SmolTiGarsPortrait: You loved this.
+		SmolTiGarsPortrait: So did I.
+		SmolTiGarsPortrait: Will you help me? I can't do this without you.
+		do Inventory.pickup("ghostie")
+	else
+		SmolTiGarsPortrait: Is this yours?
+		SmolGhostie_smile: ...
+		SmolTiGarsPortrait: Can you help me?
+		do Inventory.pickup("ghostie")
 else
-	SmolTiGarsPortrait: TBD
-do Inventory.remove()
-
-#Needs a variable for basement door.
+	SmolTiGarsPortrait: There's a ball under the bed but I can't reach... 
 
 => END
 
 ~ door_basement
 
-if GameProgress.grief_stage != Acceptance
-	SmolTiGarsPortrait: This seems locked from the inside.
+if Iventory.has("ghostie")
+	=> skeletons_basement
 else
-	do Inventory.pickup("ball")
+	SmolTiGarsPortrait: There's a ball under the bed but I can't reach... 
+
+=> END
+
+~ skeletons_basement
+
+if GameProgress.memory_count == 4
+	SmolTiGarsPortrait: There you are. I've been looking all over for you little brother.
+	SmolTiGarsPortrait: They starved you again. They never wanted us around, didn't they?
+	SmolTiGarsPortrait: But I wanted you. I wanted us to stay together.
+	SmolTiGarsPortrait: I promised I'd keep you safe, didn't I?
+	SmolTiGarsPortrait: So let's stay together and even now, I will kee you safe.
+	SmolGhostie_smile: ...
+	GhostieBro: Let's go.
+	do fadeToBlack()
+else
+	SmolTiGarsPortrait: Is this your story?
+	do fadeToBlack()
 
 => END

@@ -17,5 +17,6 @@ SmolTiGarsPortrait: Is this a dream?
 SmolGhostie_confused: ...
 SmolTiGarsPortrait: I don't want to be alone in here and I think that neither do you.
 SmolTiGarsPortrait: Shall we visit together?
+set GameProgress.grief_stage = Denial
 
 => END
