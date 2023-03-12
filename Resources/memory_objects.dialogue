@@ -22,7 +22,7 @@ if GameProgress.grief_stage != Bargaining
 	SmolTiGarsPortrait: This is appropriate for someone shorter.
 else
 	SmolTiGarsPortrait: That chair was cursed. You always cried when we sat you there.
-	SmolGhostiePortrait: *Visibly pained*
+	SmolGhostie_sad: ...
 
 => END
 
