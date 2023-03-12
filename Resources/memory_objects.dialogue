@@ -26,7 +26,7 @@ else
 
 => END
 
-~ toilet_memory_notdepression
+~ toilet_memory
 
 if GameProgress.grief_stage != Depression
 	SmolTiGarsPortrait: This is gross.
