@@ -10,14 +10,17 @@ public partial class Inventory : Node
 	public void PickItem(string itemName){
 		Catalog catalog =  GetNode<Catalog>("/root/Catalog");
 		Item item = catalog.findItem(itemName);
-		itemButton.Icon = item.icon;
+		if (item != null)
+		{
+			itemButton.Icon = GD.Load<Texture2D>(item.icon);
 		}
+	}
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		this.itemButton = new Button();
 		this.itemButton.Text = "film";
-    AddChild(itemButton);
+    	AddChild(itemButton);
 
 		// Testing purpose : Add item in inventory on spawn
 		this.PickItem("film");
