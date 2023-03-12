@@ -1,19 +1,27 @@
 using Godot;
-using Godot.Collections;
-using System;
+using System.Collections.Generic;
 using System.Text.Json;
 
- public class ItemsJson
+
+	 public class ItemsJson
     {
-			public Array<Item> items { get; set; }
+			public Item[] items { get; set; }
     }
+	
+	public class Item
+	{
+		public string name { get; set; }
+		public string description { get; set; }
+		public string type { get; set; }
+		public string icon { get; set; }
+	}
 
 
 public partial class Catalog : Node
 {
 
-	[Export]
-		public Array<Item> CatalogItems;
+
+		public List<Item> CatalogItems = new List<Item>();
 
 	// Called when the node enters the scene tree for the first time.
 

@@ -1,9 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bjdbrru8mcu5k"]
+[gd_scene load_steps=6 format=3]
 
 [ext_resource type="Script" path="res://Scripts/Inventory.cs" id="1_27tmn"]
 [ext_resource type="Script" path="res://Scripts/Catalog.cs" id="1_oy3i3"]
-[ext_resource type="Texture2D" uid="uid://d5vktla5savs" path="res://Assets/CameraRollSmol.png" id="1_rsf8g"]
-[ext_resource type="Script" path="res://Scripts/Item.cs" id="2_fjno5"]
+[ext_resource type="Texture2D" uid="uid://bxe5ay78hpfos" path="res://Assets/CameraRollSmol.png" id="1_rsf8g"]
+[ext_resource type="Script" path="res://Scripts/ItemNode.cs" id="2_fjno5"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_ens64"]
 
