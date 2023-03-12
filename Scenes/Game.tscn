@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://caeewgoop75rl"]
+[gd_scene load_steps=11 format=3 uid="uid://caeewgoop75rl"]
 
 [ext_resource type="PackedScene" uid="uid://cqe3yrpy87d76" path="res://Scenes/Character.tscn" id="2_3s0ej"]
-[ext_resource type="TileSet" uid="uid://cpsp8vurf4br0" path="res://Resources/new_tile_set.tres" id="2_g3wjm"]
+[ext_resource type="TileSet" uid="uid://cusng7mq41162" path="res://Resources/new_tile_set.tres" id="2_g3wjm"]
 [ext_resource type="Script" path="res://Scripts/Dialogue/DialogueTrigger.cs" id="3_bc44s"]
+[ext_resource type="PackedScene" uid="uid://bjdbrru8mcu5k" path="res://Scenes/inventory.tscn" id="3_o6ria"]
 [ext_resource type="PackedScene" uid="uid://73jm5qjy52vq" path="res://Scripts/Dialogue/balloon.tscn" id="4_33fmr"]
 [ext_resource type="Resource" uid="uid://dlwk4w6ucl76r" path="res://Resources/test.dialogue" id="5_k32t1"]
 [ext_resource type="Texture2D" uid="uid://dptystwtsk8uo" path="res://Assets/SmolGhostie.png" id="6_3i2tg"]
@@ -33,6 +34,8 @@ layer_2/y_sort_enabled = false
 layer_2/y_sort_origin = 0
 layer_2/z_index = 0
 layer_2/tile_data = PackedInt32Array()
+
+[node name="Control" parent="." instance=ExtResource("3_o6ria")]
 
 [node name="Character" parent="." instance=ExtResource("2_3s0ej")]
 position = Vector2(517, 793)

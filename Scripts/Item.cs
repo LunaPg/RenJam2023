@@ -6,8 +6,10 @@ public partial class Item : Node
 
 	[Export]
 	public string name;
+	public string description;
+	public string type;
 	[Export]
-	public ImageTexture imageTexture;
+	public CompressedTexture2D icon;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
