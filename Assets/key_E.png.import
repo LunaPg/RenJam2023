@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s2e2vph6ue7q"
-path="res://.godot/imported/SmolTiGarsFwd1.png-a2aa64ec7ecfc7ed2fb47fe3a776269a.ctex"
+uid="uid://dgu60uybup4fj"
+path="res://.godot/imported/key_E.png-121cb4c3f7239e65434bf63554e406a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SmolTiGarsFwd1.png"
-dest_files=["res://.godot/imported/SmolTiGarsFwd1.png-a2aa64ec7ecfc7ed2fb47fe3a776269a.ctex"]
+source_file="res://Assets/key_E.png"
+dest_files=["res://.godot/imported/key_E.png-121cb4c3f7239e65434bf63554e406a1.ctex"]
 
 [params]
 

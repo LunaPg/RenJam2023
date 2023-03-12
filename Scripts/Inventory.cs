@@ -8,8 +8,8 @@ public partial class inventory : Node
 	public Item ItemInHand = null;
 
 	public void pickItem(Item item) {
-		if (this.ItemInHand !=null){
-			throw new Exception("Alreayd have something !");
+		if (this.ItemInHand != null){
+			throw new Exception("Already have something !");
 		}
 		this.ItemInHand = item;
 	}
