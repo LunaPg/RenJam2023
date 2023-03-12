@@ -21,6 +21,7 @@ GameEvents="*res://Scripts/GameEvents.cs"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 Catalog="*res://Scripts/Catalog.cs"
 GameProgress="*res://Scripts/GameProgress.cs"
+DialogueUiManager="*res://Scripts/Dialogue/DialogueUiManager.cs"
 
 [dotnet]
 

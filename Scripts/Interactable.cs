@@ -21,7 +21,7 @@ public partial class Interactable : Node2D
 	{
 		if (_canInteract && Input.IsActionPressed("interact") && !_dialogOpened) {
 			_dialogOpened = true;
-			GetNode<DialogueUiManager>("/root/DialogueUiManager").StartDialogue(DialogueResource, DialogueTitle);
+			GetNode<DialogueUiManager>("/root/DialogueUiManager").StartDialogue(DialogueResource, DialogueTitle, OnDialogueFinished);
 		}
 	}
 

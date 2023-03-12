@@ -1,6 +1,6 @@
 ~ picture_memory
 
-if GameProgress.grief_stage != "Denial" #Denial
+if GameProgress.grief_stage != "Denial"
 	SmolTiGarsPortrait: I think I should know who this is...
 else
 	SmolTiGarsPortrait: There was never any other pictures than those with the two of them in this house.
