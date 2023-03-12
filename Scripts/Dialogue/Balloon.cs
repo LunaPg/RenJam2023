@@ -209,7 +209,7 @@ public partial class Balloon : CanvasLayer
 		}
 
 		var character = (string)dialogueLine.Get("character");
-		portrait.Texture = GD.Load<Texture2D>($"res://Assets/Portraits/{character.ToLower()}.png");
+		portrait.Texture = GD.Load<Texture2D>($"res://Assets/Portraits/{character}.png");
 
 		dialogueLabel.Modulate = INVISIBLE;
 		dialogueLabel.CustomMinimumSize = new Vector2(dialogueLabel.GetParent<Control>().Size.X - 1, dialogueLabel.CustomMinimumSize.Y);
