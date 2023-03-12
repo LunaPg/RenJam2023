@@ -1,5 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://brltkgsrwjf3s"]
+[gd_scene load_steps=6 format=3 uid="uid://brltkgsrwjf3s"]
 
+[ext_resource type="Script" path="res://Scripts/Interactable.cs" id="1_b67kk"]
+[ext_resource type="Resource" uid="uid://drnvboee62nns" path="res://Resources/memory_objects.dialogue" id="2_5j7nf"]
 [ext_resource type="Texture2D" uid="uid://bxe5ay78hpfos" path="res://Assets/CameraRollSmol.png" id="2_c8jdp"]
 [ext_resource type="Texture2D" uid="uid://dgu60uybup4fj" path="res://Assets/key_E.png" id="3_8xn3e"]
 
@@ -7,6 +9,9 @@
 radius = 51.0098
 
 [node name="CameraRoll" type="Node2D"]
+script = ExtResource("1_b67kk")
+DialogueResource = ExtResource("2_5j7nf")
+DialogueTitle = "picture_memory"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(4, -3)

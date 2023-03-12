@@ -50,7 +50,7 @@ func _ready() -> void:
 ## Step through lines and run any mutations until we either hit some dialogue or the end of the conversation
 func get_next_dialogue_line(resource: DialogueResource, key: String = "0", extra_game_states: Array = []) -> DialogueLine:
 	# You have to provide a valid dialogue resource
-	assert(resource != null, "No dialogue resource provided")
+	assert(resource != null, "No dialogue reasource provided")
 	assert(resource.lines.size() > 0, "Dialogue file has no content.")
 	
 	var dialogue: DialogueLine = await get_line(resource, key, extra_game_states)
