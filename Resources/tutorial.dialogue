@@ -3,9 +3,9 @@
 SmolTiGarsPortrait: There's a key under this flowerpot. Has anyone told them this isn't safe?
 SmolTiGarsPortrait: Should I take it?
 - Pick it up
-	You're the proud owner of a key! And maybe a house?
+	Narrator: You're the proud owner of a key! And maybe a house?
 - Leave it on the ground
-	You might need this to be honest...
+	Narrator: You might need this to be honest...
 
 => END
 
