@@ -1,0 +1,94 @@
+~ no_pickup
+
+Narrator: [[Maybe this isn't it.|It's not the time for this.|Leave it alone, will you?]].
+
+=> END
+
+#do pickup option
+
+~ keyhooks_corridor
+
+if GameProgress.grief_stage != Denial
+	=> no_pickup
+else
+	SmolTiGarsPortrait: Just a simple key. I wonder if this will guide me home.
+
+=> END
+
+~ hammer_basement
+
+if GameProgress.grief_stage != Denial
+	=> no_pickup
+else
+	SmolTiGarsPortrait: TBD
+set GameProgress.grief_stage = Anger
+
+=> END
+
+~ wall_masterbedroom
+
+if GameProgress.grief_stage != Anger
+	=> no_pickup
+else
+	SmolTiGarsPortrait: TBD
+
+=> END
+
+~ smallkey_masterbedroom
+
+if GameProgress.grief_stage != Anger
+	=> no_pickup
+else
+	SmolTiGarsPortrait: TBD
+set GameProgress.grief_stage = Bargaining
+
+=> END
+
+~ vanity_bathroom
+
+if GameProgress.grief_stage != Bargaining
+	=> no_pickup
+else
+	SmolTiGarsPortrait: TBD
+
+=> END
+
+~ cutter_bathroom
+
+if GameProgress.grief_stage != Bargaining
+	=> no_pickup
+else
+	SmolTiGarsPortrait: TBD
+set GameProgress.grief_stage = Depression
+
+=> END
+
+~ pantry_kitchen
+
+if GameProgress.grief_stage != Depression
+	=> no_pickup
+else
+	SmolTiGarsPortrait: TBD
+
+=> END
+
+~ broom_kitchen
+
+if GameProgress.grief_stage != Depression
+	=> no_pickup
+else
+	SmolTiGarsPortrait: TBD
+set GameProgress.grief_stage = Acceptance
+
+=> END
+
+~ bed_sharedbedroom
+
+if GameProgress.grief_stage != Depression
+	=> no_pickup
+else if GameProgress.grief_stage == Acceptance and GameProgress.memory_count == 4
+	SmolTiGarsPortrait: TBD
+else
+	SmolTiGarsPortrait: TBD
+
+=> END
