@@ -27,7 +27,7 @@ else
 
 SmolTiGarsPortrait: I've always wanted to swing this and break things.
 do Inventory.pickup("hammer")
-set GameProgress.grief_stage = Anger
+set GameProgress.grief_stage = "Anger"
 
 => END
 
@@ -45,7 +45,7 @@ else
 
 SmolTiGarsPortrait: Figures this would be out of reach. If only I'd known...
 do Inventory.pickup("smallkey")
-set GameProgress.grief_stage = Bargaining
+set GameProgress.grief_stage = "Bargaining"
 
 => END
 
@@ -64,7 +64,7 @@ else
 
 SmolTiGarsPortrait: What if I'm doing all this for nothing?
 do Inventory.pickup("cutter")
-set GameProgress.grief_stage = Depression
+set GameProgress.grief_stage = "Depression"
 
 => END
 
@@ -83,7 +83,7 @@ else
 SmolTiGarsPortrait: Maybe this can be useful for hard to reach places.
 SmolTiGarsPortrait: Maybe this dream will end now.
 do Inventory.pickup("broom")
-set GameProgress.grief_stage = Acceptance
+set GameProgress.grief_stage = "Acceptance"
 
 => END
 
