@@ -16,14 +16,21 @@ else
 
 => END
 
-~ chair_memory_notbargaining
+~ chair_memory
 
-SmolTiGarsPortrait: This is appropriate for someone shorter.
+if GameProgress.grief_stage != Bargaining
+	SmolTiGarsPortrait: This is appropriate for someone shorter.
+else
+	SmolTiGarsPortrait: That chair was cursed. You always cried when we sat you there.
+	SmolGhostiePortrait: *Visibly pained*
 
 => END
 
 ~ toilet_memory_notdepression
 
-SmolTiGarsPortrait: This is gross.
+if GameProgress.grief_stage != Depression
+	SmolTiGarsPortrait: This is gross.
+else
+	SmolTiGarsPortrait: You were sick again. You couldn't keep anything down and no one knew why.
 
 => END
