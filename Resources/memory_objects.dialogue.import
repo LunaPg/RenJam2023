@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_7"
+type="Resource"
+uid="uid://drnvboee62nns"
+path="res://.godot/imported/memory_objects.dialogue-e43ee086eb778167ef482c3707591a2a.tres"
+
+[deps]
+
+source_file="res://Resources/memory_objects.dialogue"
+dest_files=["res://.godot/imported/memory_objects.dialogue-e43ee086eb778167ef482c3707591a2a.tres"]
+
+[params]
+
