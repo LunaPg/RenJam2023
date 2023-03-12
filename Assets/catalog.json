@@ -39,13 +39,13 @@
     {
       "name": "Pantry",
       "description": "Childproofed still. Something could probably get rid of this plactic.",
-      "icon": "Narrator.png",
+      "icon": "Door_f.png",
       "type": "progressive"
     },
     {
       "name": "Door in basement",
       "description": "This seems locked from the inside.",
-      "icon": "Narrator.png",
+      "icon": "Door_f.png",
       "type": "progressive"
     },
     {
@@ -57,7 +57,7 @@
     {
       "name": "Wall hole",
       "description": "Maybe I could smash this open..",
-      "icon": "Narrator.png",
+      "icon": "WallCrack.png",
       "type": "progressive"
     },
     {
