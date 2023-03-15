@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://73jm5qjy52vq"]
 
 [ext_resource type="Script" path="res://Scripts/Dialogue/Balloon.cs" id="1_i487i"]
-[ext_resource type="Texture2D" uid="uid://dptystwtsk8uo" path="res://Assets/SmolGhostie.png" id="2_sxfa6"]
+[ext_resource type="Texture2D" uid="uid://268e75s2bv2r" path="res://Assets/Portraits/PictureFrame.png" id="2_nujx2"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="3_cxkdx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5d24i"]
@@ -45,13 +45,10 @@ metadata/_edit_layout_mode = 1
 [node name="HBox" type="HBoxContainer" parent="Balloon/Margin"]
 layout_mode = 2
 
-[node name="Portrait" type="Control" parent="Balloon/Margin/HBox"]
-custom_minimum_size = Vector2(150, 0)
+[node name="Portrait" type="TextureRect" parent="Balloon/Margin/HBox"]
 layout_mode = 2
-
-[node name="Sprite" type="Sprite2D" parent="Balloon/Margin/HBox/Portrait"]
-texture = ExtResource("2_sxfa6")
-centered = false
+texture = ExtResource("2_nujx2")
+expand_mode = 2
 
 [node name="VBox" type="VBoxContainer" parent="Balloon/Margin/HBox"]
 layout_mode = 2

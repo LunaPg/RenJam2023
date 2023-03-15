@@ -6,14 +6,23 @@ public partial class Interactable : Node2D
 	Resource DialogueResource;
 	[Export]
 	string DialogueTitle;
+	[Export]
+	Texture2D Sprite;
 	private Sprite2D _tooltip;
 	private bool _canInteract;
 	private bool _dialogOpened;
+	private Area2D _interactionRange;
+	private Sprite2D _sprite2D;
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		_tooltip = GetNode<Sprite2D>("Tooltip");
+		_sprite2D = GetNode<Sprite2D>("Sprite2D");
+		_sprite2D.Texture = Sprite;
+		_interactionRange = GetNode<Area2D>("InteractionRange");
+		_interactionRange.Connect(Area2D.SignalName.BodyEntered, Callable.From((Node2D body) => this.OnInteractionAreaEntered(body)));
+		_interactionRange.Connect(Area2D.SignalName.BodyExited, Callable.From((Node2D body) => this.OnInteractionAreaExited(body)));
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -32,13 +41,17 @@ public partial class Interactable : Node2D
 
 	public void OnInteractionAreaEntered(Node2D body) 
 	{
-		_canInteract = true;
-		_tooltip.Visible = true;
+		if (body is CharacterBody2D){
+			_canInteract = true;
+			_tooltip.Visible = true;
+		}
 	}
 
 	public void OnInteractionAreaExited(Node2D body) 
 	{
-		_tooltip.Visible = false;
-		_canInteract = false;
+		if (body is CharacterBody2D){
+			_tooltip.Visible = false;
+			_canInteract = false;
+		}
 	}
 }

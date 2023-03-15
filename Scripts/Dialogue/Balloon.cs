@@ -15,7 +15,7 @@ public partial class Balloon : CanvasLayer
 	RichTextLabel dialogueLabel;
 	VBoxContainer responsesMenu;
 	RichTextLabel responseTemplate;
-	Sprite2D portrait;
+	TextureRect portrait;
 
 	Resource resource;
 	Array<Variant> temporaryGameStates = new Array<Variant>();
@@ -50,7 +50,7 @@ public partial class Balloon : CanvasLayer
 		dialogueLabel = GetNode<RichTextLabel>("Balloon/Margin/HBox/VBox/DialogueLabel");
 		responsesMenu = GetNode<VBoxContainer>("Balloon/Margin/HBox/VBox/Responses");
 		responseTemplate = GetNode<RichTextLabel>("Balloon/Margin/HBox/VBox/ResponseTemplate");
-		portrait = GetNode<Sprite2D>("Balloon/Margin/HBox/Portrait/Sprite");
+		portrait = GetNode<TextureRect>("Balloon/Margin/HBox/Portrait");
 
 		responseTemplate.Hide();
 		balloon.Hide();
